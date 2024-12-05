@@ -1,18 +1,15 @@
 
 
-import './index.css'
-// import {Routes, Route } from 'react-router-dom';
 import ReactImg from "../src/assets/ReactImg.svg";
 import email from "../src/assets/email.jpg"
 import key from "../src/assets/key.jpg"
 import BackIcon from "../src/assets/BackIcon.jpg"
 import { Link } from 'react-router-dom';
 
-function App() {
 
+export default function Home() {
   return (
-    <div>
-   <div className=" font-sans min-h-screen w-full ">
+<div className=" font-sans min-h-screen w-full ">
       <div className="flex flex-col gap-[24px] py-[64px] px-[32px] font-sans w-[90vw]">
        <img src={ReactImg} alt="ReactImg" className="w-16 h-16 " />
        <h3 className="text-[40px] font-semibold leading-10">Login to your 
@@ -39,21 +36,9 @@ function App() {
       <p className=" flex flex-col w-full pb-8 text-right font-semibold text-sm leading-[18px] text-[#01CD98]">Forgot Password?</p>
   </div>
       
-      <Link to="/newChat">
       <button className="flex gap-2 justify-center text-center w-full h-[56px] px-6 py-[18px]  rounded-[36px] bg-[#01CD98] text-white font-semibold text-base leading-5">
         Login
     </button>
-      </Link>
      
- </div>
-    
-   
-  </div>
-
-  )
+ </div>  )
 }
-
-export default App
-
-
-
