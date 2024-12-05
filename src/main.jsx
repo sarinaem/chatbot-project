@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import DetailContent from "./Pages/DetailContent.jsx"
 import NotFoundPage from './components/NotFoundPage.jsx'
 import SignUp from "./components/SignUp.jsx"
+import PasswordsDefine from './components/PasswordsDefine.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   path: "/newChat",
   element: <DetailContent />,
 
+},
+{
+  path: "/enter-pass",
+  element: <PasswordsDefine />
 },
 
 {
