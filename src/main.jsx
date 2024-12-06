@@ -8,6 +8,7 @@ import NotFoundPage from './components/NotFoundPage.jsx'
 import SignUp from "./components/SignUp.jsx"
 import PasswordsDefine from './components/PasswordsDefine.jsx'
 import Profile from './components/ProfilUser.jsx'
+import NewTopic from './components/NewTopic.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
 {
   path: "/profile",
   element: <Profile />
+},
+
+{
+  path: "/newTopic",
+  element: <NewTopic />
 }
 
 

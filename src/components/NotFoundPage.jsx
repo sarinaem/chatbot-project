@@ -3,8 +3,8 @@ import {Link} from "react-router-dom"
 export default function NotFoundPage() {
   return (
     <div className="flex flex-col justify-center items-center w-full ">
-        <h2 className=" text-black text-center font-semibold mt-12">
-            گشتم نبود، نگرد نیست 😪
+        <h2 className=" text-black text-center font-semibold mt-12 font-sans">
+        😪   گشتم نبود، نگرد نیست 
         </h2>
         <img src={notFoundPage} alt="" />
         <Link to="/">

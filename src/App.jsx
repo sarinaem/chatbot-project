@@ -34,7 +34,7 @@ function App() {
   <div className="flex gap-[12px] relative items-center">
       <label htmlFor="Password"></label>
       <input className=" rounded-2xl border border-[#EBEDEC] border-solid w-full h-[56px] placeholder: pl-[50px]" type="password" placeholder="Password" id="Password"/>
-      <img src={BackIcon} alt="Back-icon" className="absolute left-[320px] top-[14px]" />
+      <img src={BackIcon} alt="Back-icon" className="absolute right-2 top-4" />
       <img src={key} alt="password" className="w-7 h-7 ml-[16px] absolute top-[14px] left-[16px]" />
       </div>
       <Link to="/enter-pass">
@@ -44,7 +44,7 @@ function App() {
   </div>
       
       <Link to="/newChat">
-      <button className=" flex gap-2 justify-center text-center w-full h-[56px] px-6 py-[18px]  rounded-[36px] bg-[#01CD98] text-white font-semibold text-base leading-5">
+      <button type="button" className=" flex gap-2 justify-center text-center w-full h-[56px] px-6 py-[18px]  rounded-[36px] bg-[#01CD98] text-white font-semibold text-base leading-5">
         Login
     </button>
       </Link>
