@@ -7,6 +7,7 @@ import DetailContent from "./Pages/DetailContent.jsx"
 import NotFoundPage from './components/NotFoundPage.jsx'
 import SignUp from "./components/SignUp.jsx"
 import PasswordsDefine from './components/PasswordsDefine.jsx'
+import Profile from './components/ProfilUser.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
 {
   path: "/signUp",
   element: <SignUp />
+}, 
+{
+  path: "/profile",
+  element: <Profile />
 }
 
 
