@@ -10,6 +10,7 @@ import PasswordsDefine from './components/PasswordsDefine.jsx'
 import Profile from './components/ProfilUser.jsx'
 import NewTopic from './components/NewTopic.jsx'
 import DownloadFile from './components/DownloadFile.jsx'
+import Send from './components/Send.jsx'
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
 {
   path: "/downloadFile",
   element: <DownloadFile />
+},
+{
+  path: "/send",
+  element: <Send />
 }
 
 
