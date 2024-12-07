@@ -9,6 +9,7 @@ import SignUp from "./components/SignUp.jsx"
 import PasswordsDefine from './components/PasswordsDefine.jsx'
 import Profile from './components/ProfilUser.jsx'
 import NewTopic from './components/NewTopic.jsx'
+import DownloadFile from './components/DownloadFile.jsx'
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
 {
   path: "/newTopic",
   element: <NewTopic />
+},
+{
+  path: "/downloadFile",
+  element: <DownloadFile />
 }
 
 

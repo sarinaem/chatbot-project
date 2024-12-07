@@ -1,4 +1,3 @@
-import ReactImg from "../assets/ReactImg.svg";
 // import search from "../assets/search.svg";  
 import back from "../assets/left-arrow.svg";
 import Profile from "../assets/Profile.svg";
@@ -6,6 +5,7 @@ import {Link} from "react-router-dom";
 import gallery from "../assets/gallery.svg";
 import archive from "../assets/archive.svg";
 import chat from "../assets/chat.svg"
+import ImgReact from "../components/ImgReact";
 export default function DetailContent(){
     return (
         <div>
@@ -26,7 +26,7 @@ export default function DetailContent(){
                  Start a new chat
                 <br />
                 <span className="flex flex-row gap-3 items-center">
-                 With <img src={ReactImg} alt="React Logo" className="w-10 h-10" />
+                 With <ImgReact />
                 </span>
                 <span className="mb-6 flex flex-row items-center gap-4 text-4xl font-bold bg-gradient-to-r from-[#051320] to-[#00F5B5] bg-clip-text text-transparent">
                 Chat bot AI
@@ -49,16 +49,16 @@ export default function DetailContent(){
                 {/* <img src={search} alt="search" className="absolute right-[15%] top-[87%]" /> */}
             </div>
             <div className="flex flex-row gap-4 ml-6 mt-6 flex-nowrap">
-            <button className="text-white flex gap-2 items-center justify-center text-center px-8 py-3 rounded-[32px] bg-[#051320] font-semibold text-base leading-5">
+            <button className="text-white flex gap-2 items-center justify-center text-center px-9 py-3 rounded-[32px] bg-[#051320] font-semibold text-base leading-5">
                      <img src={chat} alt="" />
                      <span className="text-base font-medium font-sans leading-5">Chats</span>
                 </button>
-                <button className="flex gap-2 items-center justify-center text-center px-8 py-3 rounded-[32px] border border-[#EBEDEC] border-solid font-semibold text-base leading-5">
+                <button className="flex gap-2 items-center justify-center text-center px-9 py-3 rounded-[32px] border border-[#EBEDEC] border-solid font-semibold text-base leading-5">
                 <img src={archive} alt="" />
                 <span className="text-base font-medium font-sans leading-5 text-[#616161]">Archived</span>
 
                 </button>
-                <button className="flex gap-2 items-center justify-center text-center px-8 py-3 rounded-[32px] border border-[#EBEDEC] border-solid font-semibold text-base leading-5">
+                <button className="flex gap-2 items-center justify-center text-center px-9 py-3 rounded-[32px] border border-[#EBEDEC] border-solid font-semibold text-base leading-5">
                 <img src={gallery} alt="" />
                 <span className="text-base font-medium font-sans leading-5 text-[#616161]">Images</span>
                 </button>
