@@ -18,13 +18,9 @@ export default function ProfileUser() {
         <div className="flex flex-col gap-6 items-center justify-between mt-[64px] mb-10">
           <img src={Profile} alt="profile" className="w-[96px] h-[96px]" />
           <h3 className="text-[#051320] font-bold text-[22px] leading-[33px] font-sans">Reza Alavi</h3>
-          <div className="mt-12 mx-6"></div>
-          <div className="border border-[#EBEDEC] mt-10"></div>
-          <div>1</div>
-         <div className="border border-[#EBEDEC] mt-10"></div>
-
+          </div>
+         
         </div>
-      </div>
     )
   }
   

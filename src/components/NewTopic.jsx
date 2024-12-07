@@ -3,6 +3,7 @@ import ImgReact from "./ImgReact";
 import share from "../assets/share.svg";
 import { Link } from "react-router-dom";
 import arrow from "../assets/arrow.svg";
+
 import sendIcon from "../assets/Send.svg";
 export default function NewTopic() {
   return (
