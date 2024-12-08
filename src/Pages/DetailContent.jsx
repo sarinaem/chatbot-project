@@ -7,17 +7,23 @@ import archive from "../assets/archive.svg";
 import chat from "../assets/chat.svg"
 import ImgReact from "../components/ImgReact";
 import OldChat from "../components/OldChat";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function DetailContent(){
 
-    const [date, setDate] = useState([]);
+    const [data, setData] = useState([]);
     
 
-    fetch('/data.json') 
-    .then(response => response.json())
-    .then(data => setDate(data))
-    .catch(error => console.log("error is", error)
-    )
+    useEffect(() => {
+        fetch('/data.json')
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error(`HTTP error! Status: ${res.status}`);
+                }
+                return res.json();
+            })
+            .then(data => setData(data.data))
+            .catch(error => console.log("error is", error));
+    }, []);
 
     return (
         <div>
@@ -76,8 +82,10 @@ export default function DetailContent(){
                 </button>
             </div>
         </div>
-            <OldChat date={date}/>
+            <div>
+            <OldChat data={data}/>
             
+            </div>            
 
 
         </div>

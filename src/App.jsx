@@ -31,7 +31,7 @@ function App() {
       email: email,
       password: password,
     }
-    console.log(data);
+    console.log("data",data);
   //   await fetch('https://6754b36f36bcd1eec851cacd.mockapi.io/login', {
   //     method: 'POST', 
   //     headers: {'Content-Type': 'application/json'},
@@ -55,7 +55,7 @@ function App() {
   return (
     <div>
    <div className=" font-sans min-h-screen ml-8 mr-8 ">
-      <div className="flex flex-col gap-[24px] py-[64px] px-[32px] font-sans w-[90vw]">
+      <div className="flex flex-col gap-[24px] py-[64px] px-[32px] font-sans max-w-[90vw] mx-auto">
        <img src={ReactImg} alt="ReactImg" className="w-16 h-16 " />
        <h3 className="text-[40px] font-semibold leading-10">Login to your 
           <br />
@@ -70,12 +70,12 @@ function App() {
       <form onSubmit={handleLogin}>
       <div className="flex gap-[12px] relative items-center">
           <label htmlFor="email"></label>
-          <input value={email} onChange={handleEmail} className="mb-6 rounded-2xl border border-[#EBEDEC] border-solid w-full h-[56px] placeholder: pl-[50px]" type="email" placeholder="Email" id="email"/>
+          <input  onChange={handleEmail} className="outline-0 outline-transparent mb-6 rounded-2xl border border-[#EBEDEC] border-solid w-full h-[56px] placeholder: pl-[50px]" type="email" placeholder="Email" id="email"/>
           <img src={emails} alt="email" className="w-7 h-7 ml-[16px] absolute top-[14px] left-[16px]" />
        </div>
        <div className="flex gap-[12px] relative items-center">
-         <label htmlFor="Password"></label>
-         <input value={password} onChange={handlePass} className=" rounded-2xl border border-[#EBEDEC] border-solid w-full h-[56px] placeholder: pl-[50px]" type="password" placeholder="Password" id="Password"/>
+         <label htmlFor="password"></label>
+         <input onChange={handlePass} className="outline-0 outline-transparent rounded-2xl border border-[#EBEDEC] border-solid w-full h-[56px] placeholder: pl-[50px]" type="password" placeholder="Password" id="password"/>
          <img src={BackIcon} alt="Back-icon" className="absolute right-2 top-4" />
           <img src={key} alt="password" className="w-7 h-7 ml-[16px] absolute top-[14px] left-[16px]" />
       </div>
@@ -84,11 +84,11 @@ function App() {
       <p className=" flex flex-col w-full pb-8 text-right font-semibold text-sm leading-[18px] text-[#01CD98]">Forgot Password?</p>
       </Link>
       
-      <Link to="/newChat">
-      <button type="submit" className="cursor-pointer flex gap-2 justify-center text-center w-full h-[56px] px-6 py-[18px]  rounded-[36px] bg-[#01CD98] text-white font-semibold text-base leading-5 ml-2">
+      {/* <Link to="/newChat"> */}
+      <button type="submit" className="cursor-pointer flex gap-2 justify-center text-center w-full h-[56px] px-6 py-[18px] rounded-[36px] bg-[#01CD98] text-white font-semibold text-base leading-5 ml-2">
         Login
     </button>
-      </Link>
+      {/* </Link> */}
     
       
   </div>
