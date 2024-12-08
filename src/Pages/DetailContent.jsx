@@ -7,7 +7,18 @@ import archive from "../assets/archive.svg";
 import chat from "../assets/chat.svg"
 import ImgReact from "../components/ImgReact";
 import OldChat from "../components/OldChat";
+import { useState } from "react";
 export default function DetailContent(){
+
+    const [date, setDate] = useState([]);
+    
+
+    fetch('/data.json') 
+    .then(response => response.json())
+    .then(data => setDate(data))
+    .catch(error => console.log("error is", error)
+    )
+
     return (
         <div>
             <div className="flex flex-row justify-between items-center mt-6">
@@ -65,10 +76,8 @@ export default function DetailContent(){
                 </button>
             </div>
         </div>
-            <OldChat />
-            <OldChat />
-            <OldChat />
-            <OldChat />
+            <OldChat date={date}/>
+            
 
 
         </div>
