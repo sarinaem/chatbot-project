@@ -14,7 +14,7 @@ export default function NewTopic() {
               <ImgReact />
               <h1 className=" font-semibold text-xl leading-6 font-sans text-center whitespace-nowrap">GPT 4o</h1>
              </div>
-              <Link to="/downloadFile">
+              <Link to="/exportFile">
               <img src={share} alt="" className="flex-grow-0"/>
               </Link>
        </div>

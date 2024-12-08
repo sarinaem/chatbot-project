@@ -8,11 +8,11 @@ import chat from "../assets/chat.svg"
 import ImgReact from "../components/ImgReact";
 import OldChat from "../components/OldChat";
 import { useEffect, useState } from "react";
+
 export default function DetailContent(){
+   const [data, setData] = useState([]);
 
-    const [data, setData] = useState([]);
     
-
     useEffect(() => {
         fetch('/data.json')
             .then((res) => {
@@ -63,20 +63,20 @@ export default function DetailContent(){
         <div>
             <div className="flex gap-4 flex-row ml-6 mt-8 items-center">
                 <h3 className="font-sans text-[24px] font-semibold leading-8 text-[#051320] ml-6">History</h3>
-                <input type="search" placeholder="Search ..." className="relative  w-[65%] font-medium text-base leading-5 text-[#616161] border border-[#EBEDEC] rounded-[32px] py-3 px-6 flex flex-row gap-2 "/>
+                <input type="search" placeholder="Search ..." className="relative  w-[65%] font-medium text-base leading-5 text-[#616161] border border-[#EBEDEC] rounded-[32px] py-3 px-6 flex flex-row gap-2"/>
                 {/* <img src={search} alt="search" className="absolute right-[15%] top-[87%]" /> */}
             </div>
-            <div className="flex flex-row gap-4 ml-6 mt-6 flex-nowrap">
-            <button className="text-white flex gap-2 items-center justify-center text-center px-6 py-3 rounded-[32px] bg-[#051320] font-semibold text-base leading-5 ml-6">
+            <div className="flex flex-row gap-4 ml-6 mt-6 overflow">
+            <button className="text-white flex gap-2 items-center justify-center text-center px-6 py-3 rounded-[32px] bg-[#051320] font-semibold text-base leading-5 ml-6 w-[30%]">
                      <img src={chat} alt="" />
                      <span className="text-base font-medium font-sans leading-5">Chats</span>
                 </button>
-                <button className="flex gap-2 items-center justify-center text-center px-6 py-3   rounded-[32px] border border-[#EBEDEC] border-solid font-semibold text-base leading-5">
+                <button className="flex gap-2 items-center justify-center text-center px-6 py-3   rounded-[32px] border border-[#EBEDEC] border-solid font-semibold text-base leading-5 w-[30%]">
                 <img src={archive} alt="" />
                 <span className="text-base font-medium font-sans leading-5 text-[#616161]">Archived</span>
 
                 </button>
-                <button className="flex gap-2 items-center justify-center text-center px-6 py-3  flex-shrink rounded-[32px] border border-[#EBEDEC] border-solid font-semibold text-base leading-5">
+                <button className="flex gap-2 items-center justify-center text-center px-6 py-3  flex-shrink rounded-[32px] border border-[#EBEDEC] border-solid font-semibold text-base leading-5 w-[50%]">
                 <img src={gallery} alt="" />
                 <span className="text-base font-medium font-sans leading-5 text-[#616161]">Images</span>
                 </button>
@@ -84,7 +84,7 @@ export default function DetailContent(){
         </div>
             <div>
             <OldChat data={data}/>
-            
+
             </div>            
 
 
