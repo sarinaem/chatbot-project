@@ -35,8 +35,11 @@ function Send() {
         </p>
         <div className="flex gap-6 flex-row ml-6 mt-4">
           <div className="flex gap-2">
+          <img className="w-4 h-4" src={copy} alt="" />
+
             <img className="w-4 h-4" src={shareContent} alt="" />
             <p className="text-[#616161] font-medium text-sm leading-[18px] font-sans">Share</p>
+          
           </div>
           <div className="flex gap-2">
             <img className="w-4 h-4" src={copy} alt="copy" />
