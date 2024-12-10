@@ -3,10 +3,28 @@ import { Link } from "react-router-dom";
 import arrow from "../assets/arrow.svg";
 import sendIcon from "../assets/Send.svg";
 import HeaderChatbot from "./HeaderChatbot";
+import { useState } from "react";
 
 
 export default function NewTopic() {
-
+  const [input, setInput] = useState();
+  
+  const handleFun = () => {
+    const NLPCloudClient = require('nlpcloud');
+    const client = new NLPCloudClient({model:'bart-large-cnn', token:'83a3cb6c47b46572dff897baac1683f8dad479a9'});
+    client.translation({text:`${}`}).then(res => {
+      if (res.ok) {
+          return res.json();
+      }
+  })
+  .then(data => {
+      console.log(data); 
+  })
+  .catch(error => {
+      console.error('Error:', error); 
+  });
+  
+  }
   return (
     <div>
         <HeaderChatbot />
@@ -48,13 +66,13 @@ export default function NewTopic() {
         <div className="flex flex-row gap-3 items-center justify-center">
           <input 
           // onChange={(e) => setValue(e.target.value)}
-          
+          value={input}
           type="text"
-          
-          // onChange={(e) => setInput(e.target.value)}
+          name="input"
+          onChange={(e) => setInput(e.target.value)}
           placeholder="Ask me anything..." className=" w-[70%] rounded-[30px] border border-1 py-4 px-6 border-[#EBEDEC] ml-6 mb-6"/>
           <Link to="/send">
-           <button ><img src={sendIcon} alt="send" className=" bg-[#01CD98] p-4 rounded-full flex gap-2 mr-6 mb-6" />
+           <button onClick={handleFun} ><img src={sendIcon} alt="send" className=" bg-[#01CD98] p-4 rounded-full flex gap-2 mr-6 mb-6" />
            </button>
           </Link>
         </div>

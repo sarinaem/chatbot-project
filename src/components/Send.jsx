@@ -4,7 +4,6 @@ import copy from "../assets/copy.svg";
 import edit from "../assets/edit.svg"
 import ReactImg from "../assets/ReactImg.svg";
 import shareContent from "../assets/shareContent.svg"
-
 function Send() {
 
   return (
