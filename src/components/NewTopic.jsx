@@ -4,25 +4,20 @@ import arrow from "../assets/arrow.svg";
 import sendIcon from "../assets/Send.svg";
 import HeaderChatbot from "./HeaderChatbot";
 import { useState } from "react";
-
+import NLPCloudClient from 'nlpcloud';
 
 export default function NewTopic() {
   const [input, setInput] = useState();
   
   const handleFun = () => {
-    const NLPCloudClient = require('nlpcloud');
-    const client = new NLPCloudClient({model:'bart-large-cnn', token:'83a3cb6c47b46572dff897baac1683f8dad479a9'});
-    client.translation({text:`${}`}).then(res => {
-      if (res.ok) {
-          return res.json();
-      }
-  })
-  .then(data => {
-      console.log(data); 
-  })
-  .catch(error => {
-      console.error('Error:', error); 
-  });
+    // const NLPCloudClient = require('nlpcloud');
+    const client = new NLPCloudClient({model:'nllb-200-3-3b', token:'83a3cb6c47b46572dff897baac1683f8dad479a9'});
+    client.translation({text:`input`}).then((response) =>{
+      console.log(response.data);
+    }).catch((err) => {
+      console.error(err.response.status);
+      console.error(err.response.data.detail);
+    });
   
   }
   return (
