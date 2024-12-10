@@ -33,7 +33,7 @@ export default function Login() {
     const errorMsg = validatePassword(password);
     if(errorMsg) {
      setError(errorMsg);
-     return
+     return;
     }
      fetch('https://6755e8c711ce847c992b8750.mockapi.io/login', {
         method: 'POST', 
@@ -58,6 +58,7 @@ export default function Login() {
     }
 
     const handleToggle = () => {
+        
         if(type === "password") {
             setIcon(eye);
             setType("text");
@@ -68,7 +69,7 @@ export default function Login() {
     }
   return (
     <form onSubmit={handleLogin} className=''>
-      <div className="flex gap-[12px] relative items-center">
+      <div className="flex gap-3 relative items-center">
           <label htmlFor="email"></label>
           <input onChange={(event) => setEmail(event.target.value)} className="outline-0 outline-transparent mb-6 rounded-2xl border border-[#EBEDEC] border-solid w-full h-[56px] placeholder: pl-[50px]" type="email" placeholder="Email" id="email"/>
           <img src={emails} alt="email" className="w-7 h-7 ml-[16px] absolute top-[14px] left-[16px]" />

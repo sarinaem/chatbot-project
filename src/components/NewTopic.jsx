@@ -1,23 +1,15 @@
-import menuMob from "../assets/Hamburger.svg";
-import ImgReact from "./ImgReact";
-import share from "../assets/share.svg";
+
 import { Link } from "react-router-dom";
 import arrow from "../assets/arrow.svg";
-
 import sendIcon from "../assets/Send.svg";
+import HeaderChatbot from "./HeaderChatbot";
+
+
 export default function NewTopic() {
+
   return (
     <div>
-        <div className="flex flex-row gap-3 justify-start items-center mt-6 mb-3">
-            <img src={menuMob} alt="" className="ml-6 flex-grow-0" />
-             <div className="flex flex-row gap-4 items-center ml-5 flex-grow">
-              <ImgReact />
-              <h1 className=" font-semibold text-xl leading-6 font-sans text-center whitespace-nowrap">GPT 4o</h1>
-             </div>
-              <Link to="/exportFile">
-              <img src={share} alt="" className="flex-grow-0"/>
-              </Link>
-       </div>
+        <HeaderChatbot />
        <div className="border border-[#EBEDEC] mt-10"></div>
        <div className="mb-9">
          <h2 className="font-sans font-semibold leading-5 text-base text-center mt-6 text-[#051320]">How can I help you my friend? 😊️</h2>
@@ -53,11 +45,17 @@ export default function NewTopic() {
     
             </div>
         </div>
-        <div className="flex flex-row gap-3 items-center mb-">
-          <input type="text" placeholder="Ask me anything..." className=" w-[70%] rounded-[30px] border border-1 py-4 px-6 border-[#EBEDEC] ml-6 mb-6"/>
+        <div className="flex flex-row gap-3 items-center justify-center">
+          <input 
+          // onChange={(e) => setValue(e.target.value)}
+          
+          type="text"
+          
+          // onChange={(e) => setInput(e.target.value)}
+          placeholder="Ask me anything..." className=" w-[70%] rounded-[30px] border border-1 py-4 px-6 border-[#EBEDEC] ml-6 mb-6"/>
           <Link to="/send">
-           <img src={sendIcon} alt="send" className=" bg-[#01CD98] p-4 rounded-full flex gap-2 mr-6 mb-6" />
-
+           <button ><img src={sendIcon} alt="send" className=" bg-[#01CD98] p-4 rounded-full flex gap-2 mr-6 mb-6" />
+           </button>
           </Link>
         </div>
        </div>

@@ -3,7 +3,7 @@ import ReactImg from "/src/assets/ReactImg.svg";
 
 import { Link } from 'react-router-dom';
 import facebook from '/src/assets/facebook.svg'
-import googleIcon from "./src/assets/google.svg"
+import googleIcon from "/src/assets/google.svg"
 import Login from './components/Login';
 
 function App() {

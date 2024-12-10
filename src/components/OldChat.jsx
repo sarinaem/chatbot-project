@@ -4,6 +4,7 @@ export default function OldChat(data) {
   return (
     <div className="flex flex-row gap-4 mt-6 ml-4 flex-wrap items-center overflow-x-hidden">
       {data.data.map((item) => {
+        
         let itemText = item.text;
         let itemTitle = item.title;
 
@@ -22,10 +23,15 @@ export default function OldChat(data) {
             <p className="overflow-hidden text-ellipsis font-normal text-base font-sans leading-6 text-[#616161] ">
               {itemText}
             </p>
-            <span className="text-[#616161] opacity-70 font-normal text-sm leading-[18px] font-sans">{item.time}</span>
-          </div>
+            <span className="text-[#616161] opacity-70 font-normal text-sm leading-[18px] font-sans">{item.time}</span>            
+          
+          </div>   
         );
+        
       })}
     </div>
+    
+    
   );
+  
 }
