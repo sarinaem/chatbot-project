@@ -8,36 +8,31 @@ import copy from "../assets/copy.svg";
 import edit from "../assets/edit.svg"
 import ReactImg from "../assets/ReactImg.svg";
 import shareContent from "../assets/shareContent.svg"
-export default function NewTopic() {
+
+
+
+ export default function NewTopic() {
   const [inputValue, setInputValue] = useState("");
+  // const [inputText, setInputText] = useState('');
+  // const [targetLanguage, setTargetLanguage] = useState('fa'); 
   const [msg, setMsg] = useState("");
-  const handleMsg = (e) => {
-    setInputValue(e.target.value)
-    const userMessage = inputValue;  // ذخیره پیام کاربر
+  const handleMsg = async() => {
+    const userMessage = inputValue; 
     setMsg(userMessage);
       setInputValue("");
+      // if (inputText) {
+      //   const translatedText = await translateText(inputText, targetLanguage);
+      //   setMsg(translatedText)
+      // } 
+    
+  }
+  
+  
 
-      fetch("https://translation.googleapis.com/language/translate/v2?key=${API_KEY}", {
-        method: 'POST',
-        headers: {
-          'Authorization': 'Bearer 83a3cb6c47b46572dff897baac1683f8dad479a9',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          text: {msg},
-          target_language: 'en', // زبان هدف
-        }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          setResponse(data);
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
-      };
+  
+  
 
-
+   
  
   return (
     <div>
@@ -86,7 +81,8 @@ export default function NewTopic() {
            <button onClick={handleMsg}><img src={sendIcon} alt="send" className=" bg-[#01CD98] p-4 rounded-full flex gap-2 mr-6 mb-6" />
            </button>
         </div>
-      
+        <div className="border border-[#EBEDEC] mt-10"></div>
+
         {msg && (
 
         <div>
@@ -112,7 +108,7 @@ export default function NewTopic() {
      <h1 className=" font-semibold text-base leading-5 font-sans text-center whitespace-nowrap">Chat Bot AI</h1>
    </div>
    <p className="ml-7 mt-4 mr-6 text-[#051320] font-normal text-base leading-6">
-  
+          I can not get data
    </p>
    <div className="flex gap-6 flex-row ml-6 mt-4">
      <div className="flex gap-2">
