@@ -5,7 +5,10 @@ import sendIcon from "../assets/Send.svg";
 import HeaderChatbot from "./HeaderChatbot";
 
 export default function NewTopic() {
-
+  const handle = (e) => {
+    console.log(e.target.value);
+    
+  }
   return (
     <div>
         <HeaderChatbot />
@@ -51,7 +54,7 @@ export default function NewTopic() {
           // onChange={(event) =>setInput(event.target.value)}
            placeholder="Ask me anything..." className=" w-[70%] rounded-[30px] border border-1 py-4 px-6 border-[#EBEDEC] ml-6 mb-6"/>
           <Link to="/send">
-           <button><img src={sendIcon} alt="send" className=" bg-[#01CD98] p-4 rounded-full flex gap-2 mr-6 mb-6" />
+           <button onClick={handle}><img src={sendIcon} alt="send" className=" bg-[#01CD98] p-4 rounded-full flex gap-2 mr-6 mb-6" />
            </button>
           </Link>
         </div>
