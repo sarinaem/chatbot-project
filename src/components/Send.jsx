@@ -4,13 +4,15 @@ import copy from "../assets/copy.svg";
 import edit from "../assets/edit.svg"
 import ReactImg from "../assets/ReactImg.svg";
 import shareContent from "../assets/shareContent.svg"
-function Send() {
+function Send(msg) {
 
   return (
     <div>
       <HeaderChatbot />
       <div className="border border-[#EBEDEC] mt-10"></div>
-        <div className="flex gap-3 mt-6 mb-6">
+      {msg && (
+      <div>
+      <div className="flex gap-3 mt-6 mb-6">
           <img src={Profile} alt="profile" className="w-6 h-6 ml-6 " />
           <p className="">{}</p>
         </div>
@@ -26,6 +28,7 @@ function Send() {
           </div>
         </div>
         <div className="border border-[#EBEDEC] mt-10"></div>
+        
         <div className="flex gap-3 ml-6 mt-6 items-center">   
           <img src={ReactImg} alt="React Logo" className="w-6 h-6" />
           <h1 className=" font-semibold text-base leading-5 font-sans text-center whitespace-nowrap"></h1>
@@ -45,8 +48,12 @@ function Send() {
             <p className="text-[#616161] font-medium text-sm leading-[18px] font-sans">Copy</p>
           </div>
         </div>
-
+      </div>
+      
+    )}
+    
     </div>
+    
   )
 }
 
