@@ -4,7 +4,7 @@ import copy from "../assets/copy.svg";
 import edit from "../assets/edit.svg"
 import { useState } from "react";
 
-export default function UserChat({msg}){
+ export default function UserChat({msg}){
     const[editText, setEditText] = useState(msg);
     const[isEdit, setIsEdit] = useState(false)
     const handleEdit = () => {
@@ -16,10 +16,10 @@ export default function UserChat({msg}){
         };
     return (
         <div>
-                   <div className="flex gap-3 mt-6 mb-6">
-                    <img src={Profile} alt="profile" className="w-6 h-6 ml-6 " />
-                    <p className="">you</p>
-                   </div>
+             <div className="flex gap-3 mt-6 mb-6">
+                <img src={Profile} alt="profile" className="w-6 h-6 ml-6 " />
+                <p className="">you</p>
+            </div>
                    {/* <p className="mr-6 ml-6 mt-4 text-[#01CD98] font-sans font-normal text-base leading-6">{msg}</p> */}
                    <p
                 className={`mr-6 ml-6 mt-4 text-[#01CD98] font-sans font-normal text-base leading-6 ${
@@ -42,6 +42,8 @@ export default function UserChat({msg}){
                     <img className="w-4 h-4" src={copy} alt="copy" />
                     <p className="text-[#616161] font-medium text-sm leading-[18px] font-sans">Copy</p>
                   </div>
+                  <div className="border border-[#EBEDEC] mt-10"></div>
+
                 </div>
         </div>
     )
@@ -49,5 +51,5 @@ export default function UserChat({msg}){
 
 
 UserChat.propTypes ={
-    msg:PropTypes.array,
+    msg:PropTypes.string,
 }

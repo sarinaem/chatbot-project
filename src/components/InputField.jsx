@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 export default function InputField({ inputValue, setInputValue, handleMsg }) {
   return (
-      <div className="flex flex-row gap-3 items-center justify-center sticky top-0">
+      <div className="flex flex-row gap-3 items-center justify-center mt-6">
               <input 
               type="text"
               value={inputValue}
