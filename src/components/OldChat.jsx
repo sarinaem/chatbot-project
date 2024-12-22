@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 export default function OldChat(data) {
@@ -16,16 +17,21 @@ export default function OldChat(data) {
         }
 
         return (
-          <div key={item.id} className=" backdrop-blur-[30px] flex w-[43%] px-6 py-8 gap-3 rounded-[36px] border border-[#EBEDEC] flex-col mr-4">
+          
+            <div key={item.id} className=" backdrop-blur-[30px] flex w-[43%] px-6 py-8 gap-3 rounded-[36px] border border-[#EBEDEC] flex-col mr-4">
+            <Link to={`/newTopic/${item.id}`}>
             <h3 className="font-sans font-semibold text-base leading-5 text-[#01CD98] overflow-hidden text-ellipsis">
               {itemTitle}
             </h3>
+            </Link>
+
             <p className="overflow-hidden text-ellipsis font-normal text-base font-sans leading-6 text-[#616161] ">
               {itemText}
             </p>
             <span className="text-[#616161] opacity-70 font-normal text-sm leading-[18px] font-sans">{item.time}</span>            
           
           </div>   
+        
         );
         
       })}

@@ -62,16 +62,13 @@ import Chatbot from "./Chatbot";
         </div>
         <div>
            {historyChat.map ((msg, index) => (
-            <div key={index} className={msg.role === 'user' ? "userMsg" : "botMessage"}>
+            <div key={index}>
 
               {msg.role === 'user' ? (
               <UserChat msg={msg.content} /> 
             ) : (
-              <Chatbot transtMsg={msg.content} />
+              <Chatbot  transtMsg={msg.content} />
             )}
-            {/* <div key={index} className={msg.role === 'user' ? <UserChat msg={msg}/>
-            :  <Chatbot transtMsg={transtMsg} /> 
-          }> */}
             </div>
            )
         
