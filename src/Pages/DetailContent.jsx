@@ -14,7 +14,7 @@ export default function DetailContent(){
 
     
     useEffect(() => {
-        fetch('/data.json')
+        fetch('/chatbot-project/data.json')
             .then((res) => {
                 if (!res.ok) {
                     throw new Error(`HTTP error! Status: ${res.status}`);
@@ -35,7 +35,7 @@ export default function DetailContent(){
                   <p className="text-[#051320]">Back</p>
                 </div>
                 </Link>
-                <Link to="/profile">
+                <Link to="chatbot-project/profile">
                 <img src={Profile} alt="" className="mr-6 flex justify-center items-center w-[40px] h-[40px]" />
                 </Link>
             </div>

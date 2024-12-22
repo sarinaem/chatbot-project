@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-export default function OldChat(data) {
+export default function OldChat(data ) {
   return (
     <div className="flex flex-row gap-4 mt-6 ml-4 flex-wrap items-center overflow-x-hidden">
       {data.data.map((item) => {
@@ -19,7 +19,9 @@ export default function OldChat(data) {
         return (
           
             <div key={item.id} className=" backdrop-blur-[30px] flex w-[43%] px-6 py-8 gap-3 rounded-[36px] border border-[#EBEDEC] flex-col mr-4">
-            <Link to={`/newTopic/${item.id}`}>
+            {/* <Link to={`chatbot-project/NewTopic/${item.id}`}> */}
+            <Link to={`/message/${item.id}`}>
+
             <h3 className="font-sans font-semibold text-base leading-5 text-[#01CD98] overflow-hidden text-ellipsis">
               {itemTitle}
             </h3>

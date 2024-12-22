@@ -1,19 +1,35 @@
 
 import HeaderChatbot from "./HeaderChatbot";
-import { useState } from "react";
+import {  useState } from "react";
 // import ReactImg from "../assets/ReactImg.svg";
 import ItemTopic from "./ItemTopic";
 import InputField from "./InputField";
-import UserChat from "./UserChat";
-import Chatbot from "./Chatbot";
+
+import Message from "./Message";
+// import { useParams } from "react-router-dom";
 
 
  export default function NewTopic() {
+  // const location = useLocation();
+  // const {title, description} = location.state || {}
+  // const {id} = useParams();
+
   const [inputValue, setInputValue] = useState("");
   const [transtMsg, setTransMsg] = useState("");
   const [showText, setShowText] = useState(true);
   const [historyChat, setHistoryChat] = useState([]);
   const [msg, setMsg] = useState("");
+  // const selectedChat = data.find((chat) => chat.id === id); 
+
+  // useEffect(() => {
+  //   if (selectedChat) {
+  //     const history = selectedChat.map((message) => ({
+  //       role: message.role,
+  //       content: message.content,
+  //     }));
+  //     setHistoryChat(history);
+  //   }
+  // }, [selectedChat]);
   const handleMsg = async (inputValue) => {
     const userMsg = { role: 'user', content: inputValue };
     setHistoryChat(prev => [...prev, userMsg])
@@ -28,7 +44,7 @@ import Chatbot from "./Chatbot";
       })
       .then(data => {
         console.log(data);
-        if(data, data.length > 0){
+        if(data && data.length > 0){
           const definitions = data[0]?.meanings[0]?.definitions[0]?.definition;
           setTransMsg(definitions);
           const botMessage = { role: 'bot', content: definitions };
@@ -46,7 +62,7 @@ import Chatbot from "./Chatbot";
       
     }
   }
-  
+
   return (
     <div>
         <HeaderChatbot />
@@ -62,14 +78,8 @@ import Chatbot from "./Chatbot";
         </div>
         <div>
            {historyChat.map ((msg, index) => (
-            <div key={index}>
+                <Message key={index} msg={msg} />
 
-              {msg.role === 'user' ? (
-              <UserChat msg={msg.content} /> 
-            ) : (
-              <Chatbot  transtMsg={msg.content} />
-            )}
-            </div>
            )
         
         
@@ -77,24 +87,7 @@ import Chatbot from "./Chatbot";
         </div>
         <InputField inputValue={inputValue} setInputValue={setInputValue} handleMsg={handleMsg}/>
         <div className="border border-[#EBEDEC] mt-10"></div>
-{/* 
-        {msg && (
 
-        <div>
-          <UserChat msg={msg}/>
-         <div className="border border-[#EBEDEC] mt-10"></div>
-          {transtMsg && (
-            <div className="mb-12">
-               <div className="flex gap-3 ml-6 mt-6 items-center">   
-                <img src={ReactImg} alt="React Logo" className="w-6 h-6" />
-                <h1 className="font-semibold text-base leading-5 font-sans text-center whitespace-nowrap">Chat Bot:</h1>
-                </div>
-            <Chatbot transtMsg={transtMsg} /> 
-         </div>
- )}
-        </div>
-
-        )} */}
        </div>
   )
   

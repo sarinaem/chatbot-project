@@ -10,31 +10,49 @@ import PasswordsDefine from './components/PasswordsDefine.jsx'
 import Profile from './components/ProfilUser.jsx'
 import NewTopic from './components/NewTopic.jsx'
 import Send from './components/Send.jsx'
-import ExportFile from './components/ExportFile.jsx'
+import Home from './Home.jsx'
+import Message from './components/Message.jsx'
 
 const router = createBrowserRouter([
   {
-  path: "/",
+    path: "chatbot-project/home",
+    element: <Home />,
+  
+  },
+  {
+  path: "chatbot-project/",
   element: <App />,
   errorElement: <NotFoundPage />
 
 }, 
 {
-  path: "/newChat",
+  path: "chatbot-project/newChat",
   element: <DetailContent />,
 
 },
+
+// {
+//   path: "chatbot-project/newTopic/:chatId",
+//   element: <NewTopic />,
+
+// },
+
+
+//   path: "/chatbot-project/newChat",
+//   element: <NewChat />,
+// },
+
 {
-  path: "/enter-pass",
+  path: "chatbot-project/enter-pass",
   element: <PasswordsDefine />
 },
 
 {
-  path: "/signUp",
+  path: "chatbot-project/signUp",
   element: <SignUp />
 }, 
 {
-  path: "/profile",
+  path: "chatbot-project/profile",
   element: <Profile />
 },
 
@@ -42,20 +60,23 @@ const router = createBrowserRouter([
   path: "/newTopic",
   element: <NewTopic />
 },
+// {
+//   path: "chatbot-project/exportFile",
+//   element: <ExportFile />
+// },
 {
-  path: "/exportFile",
-  element: <ExportFile />
+  path: "chatbot-project/send",
+  element: <Send />
 },
 {
-  path: "/send",
-  element: <Send />
+  path: "/message/:id",
+  element: <Message />
 }
-
 
 ])
 createRoot(document.getElementById('root')).render(
       <StrictMode>
-          <RouterProvider router={router}/>
+          <RouterProvider router={router}></RouterProvider>
         </StrictMode> 
 
 
