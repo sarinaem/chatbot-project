@@ -28,7 +28,7 @@ export default function DetailContent(){
     return (
         <div>
             <div className="flex flex-row justify-between items-center mt-6">
-                <Link to="/">
+                <Link to="/chatbot-project">
                 <div className="flex flex-row gap-2 items-center ml-4 ">
                 <img src={back} alt="" />
 
