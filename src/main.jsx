@@ -17,6 +17,8 @@ const router = createBrowserRouter([
   {
     path: "chatbot-project/home",
     element: <Home />,
+    errorElement: <NotFoundPage />
+
   
   },
   {
