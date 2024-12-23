@@ -42,9 +42,10 @@ import Message from "./Message";
             };
             setHistoryChat((prev) => [...prev, botMessage]);
           }, 1000);
-        
-
-        }
+       
+        } else((error)=> {
+          console.log(error)
+        })
       })
 
     }catch(error){

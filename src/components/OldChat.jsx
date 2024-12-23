@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 
-export default function OldChat(data ) {
+export default function OldChat({data} ) {
   // if (!data || !data.data) return <div>No chats available.</div>;
   return (
     <div className="flex flex-row gap-4 mt-6 ml-4 flex-wrap items-center overflow-x-hidden">
@@ -44,5 +45,8 @@ export default function OldChat(data ) {
   );
   
   
+}
+OldChat.propTypes ={
+  data:PropTypes.array,
 }
 
