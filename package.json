@@ -2,20 +2,24 @@
   "name": "chatbot-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://sarinaem.github.io/chatbot-project/",
-  
+  "homepage": "https://sarinaem.github.io/chatbot-project",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    
   },
+  
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "axios": "^1.7.9",
     "date-fns": "^4.1.0",
+    "gh-pages": "^6.2.0",
     "nlpcloud": "^2.0.8",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",

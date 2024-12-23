@@ -31,16 +31,6 @@ const router = createBrowserRouter([
 
 },
 
-// {
-//   path: "chatbot-project/newTopic/:chatId",
-//   element: <NewTopic />,
-
-// },
-
-
-//   path: "/chatbot-project/newChat",
-//   element: <NewChat />,
-// },
 
 {
   path: "chatbot-project/enter-pass",
@@ -60,10 +50,7 @@ const router = createBrowserRouter([
   path: "/chatbot-project/newTopic",
   element: <NewTopic />
 },
-// {
-//   path: "chatbot-project/exportFile",
-//   element: <ExportFile />
-// },
+
 {
   path: "chatbot-project/send",
   element: <Send />
