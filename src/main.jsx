@@ -52,12 +52,12 @@ const router = createBrowserRouter([
   element: <SignUp />
 }, 
 {
-  path: "chatbot-project/profile",
+  path: "/profile",
   element: <Profile />
 },
 
 {
-  path: "/newTopic",
+  path: "/chatbot-project/newTopic",
   element: <NewTopic />
 },
 // {

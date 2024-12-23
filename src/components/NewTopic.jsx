@@ -1,12 +1,9 @@
 
 import HeaderChatbot from "./HeaderChatbot";
-import {  useState } from "react";
-// import ReactImg from "../assets/ReactImg.svg";
+import { useState } from "react";
 import ItemTopic from "./ItemTopic";
 import InputField from "./InputField";
-
 import Message from "./Message";
-// import { useParams } from "react-router-dom";
 
 
  export default function NewTopic() {
@@ -19,17 +16,7 @@ import Message from "./Message";
   const [showText, setShowText] = useState(true);
   const [historyChat, setHistoryChat] = useState([]);
   const [msg, setMsg] = useState("");
-  // const selectedChat = data.find((chat) => chat.id === id); 
-
-  // useEffect(() => {
-  //   if (selectedChat) {
-  //     const history = selectedChat.map((message) => ({
-  //       role: message.role,
-  //       content: message.content,
-  //     }));
-  //     setHistoryChat(history);
-  //   }
-  // }, [selectedChat]);
+ 
   const handleMsg = async (inputValue) => {
     const userMsg = { role: 'user', content: inputValue };
     setHistoryChat(prev => [...prev, userMsg])
@@ -47,12 +34,16 @@ import Message from "./Message";
         if(data && data.length > 0){
           const definitions = data[0]?.meanings[0]?.definitions[0]?.definition;
           setTransMsg(definitions);
-          const botMessage = { role: 'bot', content: definitions };
-          setHistoryChat(prev => [...prev, botMessage]);
-     
+          setTimeout(() => {
+            const botMessage = {
+               role: 'bot', 
+               content: definitions
+         
+            };
+            setHistoryChat((prev) => [...prev, botMessage]);
+          }, 1000);
+        
 
-        } else {
-          setTransMsg("definition not found.")          
         }
       })
 

@@ -1,9 +1,11 @@
 // import { useParams } from "react-router-dom";
+import PropTypes from "prop-types";
 import Chatbot from "./Chatbot";
 import UserChat from "./UserChat";
 
-export default function Message(msg) {
+export default function Message({ msg }) {
     // const { id } = useParams();
+    if (!msg) return null;
   return (
                 <div>
                     
@@ -16,4 +18,8 @@ export default function Message(msg) {
                )
             
             
+}
+
+Message.propTypes ={
+  msg:PropTypes.array,
 }
