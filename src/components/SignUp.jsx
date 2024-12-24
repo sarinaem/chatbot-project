@@ -17,7 +17,7 @@ function SignUp() {
        <img src={BackIcon} alt="Back-icon" className="absolute right-2 top-4" />
        <img src={key} alt="password" className="w-7 h-7 ml-[16px] absolute top-[14px] left-[16px]" />
        </div>
-       <Link to="/enter-pass">
+       <Link to="/chatbot-project/enter-pass">
        <p className=" flex flex-col w-full pb-8 text-right font-semibold text-sm leading-[18px] text-[#01CD98]">Forgot Password?</p>
        </Link>
        <button type="button" className=" flex gap-2 justify-center text-center  h-[56px] px-6 py-[18px] ml-6  rounded-[36px] bg-[#01CD98] text-white font-semibold text-base leading-5">

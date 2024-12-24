@@ -47,7 +47,7 @@ export default function Login() {
     })
     .then(data => {
         console.log(data); 
-        navigate('/newChat');
+        navigate('/chatbot-project/newChat');
 
     })
     .catch(error => {
@@ -86,7 +86,7 @@ export default function Login() {
       </div>
       {error && <p className="ml-6 mt-2 text-red-500 text-sm mb-4">{error}</p>}
         
-      <Link to="/enter-pass">
+      <Link to="/chatbot-project/enter-pass">
       <p className=" flex flex-col w-full mb-8 mt-6 text-right font-semibold text-sm leading-[18px] text-[#01CD98]">Forgot Password?</p>
       </Link>
       <button type="submit" className="cursor-pointer flex gap-2 justify-center text-center w-full h-[56px] px-6 py-[18px] rounded-[36px] bg-[#01CD98] text-white font-semibold text-base leading-5 ml-2">

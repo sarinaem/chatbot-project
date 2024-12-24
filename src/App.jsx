@@ -20,7 +20,7 @@ function App() {
        <span className="font-normal text-sm text-[#616161] leading-6">
          Don’t have an account? 
        <span></span>
-       <Link to="/signUp" className="text-[#01CD98] text-base font-semibold leading-5 mb-0"> Sign Up</Link>
+       <Link to="/chatbot-project/signUp" className="text-[#01CD98] text-base font-semibold leading-5 mb-0"> Sign Up</Link>
        </span>
      </div>
      <div className="flex flex-col gap-[24px] mr-8 mt-0">

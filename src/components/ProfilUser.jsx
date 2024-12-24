@@ -8,7 +8,7 @@ export default function ProfileUser() {
       <div>
         <div className="flex flex-row justify-between items-center mt-5">
           <div className="flex flex-row items-center ml-4 gap-3">
-          <Link to="/">
+          <Link to="/chatbot-project/">
           <img src={leftIcon} alt="" className="" />
           </Link>
           <h3 className="font-semibold text-xl leading-6 font-sans text-[#051320]">Profile & Settings</h3>
