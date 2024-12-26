@@ -21,7 +21,7 @@ function App() {
             Don’t have an account?
             <span></span>
             <Link
-              to="/signUp"
+              to="/chatbot-project/signUp"
               className="text-[#01CD98] text-base font-semibold leading-5 mb-0"
             >
               {" "}

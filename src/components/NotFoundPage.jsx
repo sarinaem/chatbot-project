@@ -7,7 +7,7 @@ export default function NotFoundPage() {
         😪 گشتم نبود، نگرد نیست
       </h2>
       <img src={notFoundPage} alt="" />
-      <Link to="/">
+      <Link to="chatbot-project/">
         <button className="flex gap-2 justify-center text-center mt-5 h-[56px] px-6 py-[18px]  rounded-[36px] bg-[#01CD98] text-white font-semibold text-base leading-5">
           بازگشت به صفحه اصلی
         </button>

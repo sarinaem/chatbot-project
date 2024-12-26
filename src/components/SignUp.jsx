@@ -1,6 +1,6 @@
-import email from "../assets/email.jpg";
-import key from "../assets/key.jpg";
 import BackIcon from "../assets/BackIcon.jpg";
+import emailImg from "../assets/emaill.svg";
+import keyImg from "../assets/key.jpg";
 import { Link } from "react-router-dom";
 
 function SignUp() {
@@ -15,7 +15,7 @@ function SignUp() {
           id="email"
         />
         <img
-          src={email}
+          src={emailImg}
           alt="email"
           className="w-7 h-7 ml-[16px] absolute top-[14px] left-[16px]"
         />
@@ -34,12 +34,12 @@ function SignUp() {
           className="absolute right-2 top-4"
         />
         <img
-          src={key}
+          src={keyImg}
           alt="password"
           className="w-7 h-7 ml-[16px] absolute top-[14px] left-[16px]"
         />
       </div>
-      <Link to="/enter-pass">
+      <Link to="/chatbot-project/enter-pass">
         <p className=" flex flex-col w-full pb-8 text-right font-semibold text-sm leading-[18px] text-[#01CD98]">
           Forgot Password?
         </p>

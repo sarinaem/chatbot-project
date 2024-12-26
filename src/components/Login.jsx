@@ -108,7 +108,7 @@ export default function Login() {
       </div>
       {error && <p className="ml-6 mt-2 text-red-500 text-sm mb-4">{error}</p>}
 
-      <Link to="/enter-pass">
+      <Link to="/chatbot-project/enter-pass">
         <p className=" flex flex-col w-full mb-8 mt-6 text-right font-semibold text-sm leading-[18px] text-[#01CD98]">
           Forgot Password?
         </p>

@@ -13,7 +13,7 @@ export default function HeaderChatbot() {
           GPT 4o
         </h1>
       </div>
-      <Link to="/">
+      <Link to="/chatbot-project/">
         <img src={share} alt="" className="flex-grow-0" />
       </Link>
     </div>
