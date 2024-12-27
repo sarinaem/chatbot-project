@@ -13,52 +13,57 @@ import Send from "./components/Send.jsx";
 import Home from "./Home.jsx";
 import Message from "./components/Message.jsx";
 
-const router = createBrowserRouter([
-  {
-    path: "chatbot-project/home",
-    element: <Home />,
-    errorElement: <NotFoundPage />,
-  },
-  {
-    path: "chatbot-project/",
-    element: <App />,
-    errorElement: <NotFoundPage />,
-  },
-  {
-    path: "chatbot-project/newChat",
-    element: <DetailContent />,
-  },
+const router = createBrowserRouter(
+  [
+    {
+      path: "home",
+      element: <Home />,
+      errorElement: <NotFoundPage />,
+    },
+    {
+      path: "",
+      element: <App />,
+      errorElement: <NotFoundPage />,
+    },
+    {
+      path: "newChat",
+      element: <DetailContent />,
+    },
 
-  {
-    path: "chatbot-project/enter-pass",
-    element: <PasswordsDefine />,
-  },
+    {
+      path: "enter-pass",
+      element: <PasswordsDefine />,
+    },
 
-  {
-    path: "chatbot-project/signUp",
-    element: <SignUp />,
-  },
-  {
-    path: "/profile",
-    element: <Profile />,
-  },
+    {
+      path: "signUp",
+      element: <SignUp />,
+    },
+    {
+      path: "/profile",
+      element: <Profile />,
+    },
 
-  {
-    path: "/chatbot-project/newTopic",
-    element: <NewTopic />,
-  },
+    {
+      path: "/newTopic",
+      element: <NewTopic />,
+    },
 
+    {
+      path: "send",
+      element: <Send />,
+    },
+    {
+      path: "/message/:id",
+      element: <Message />,
+    },
+  ],
   {
-    path: "chatbot-project/send",
-    element: <Send />,
-  },
-  {
-    path: "/message/:id",
-    element: <Message />,
-  },
-]);
+    basename: "/chatbot-project/",
+  }
+);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
-  </StrictMode>,
+  </StrictMode>
 );
