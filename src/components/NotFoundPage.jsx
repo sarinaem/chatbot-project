@@ -1,4 +1,4 @@
-import notFoundPage from "../assets/notFoundPage.webp";
+import notFoundPage from "../assets/NotFoundPage.webp";
 import { Link } from "react-router-dom";
 export default function NotFoundPage() {
   return (
