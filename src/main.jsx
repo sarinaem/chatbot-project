@@ -54,16 +54,16 @@ const router = createBrowserRouter(
       element: <Send />,
     },
     {
-      path: "/message/:id",
+      path: "message/:id",
       element: <Message />,
     },
   ],
   {
     basename: "/chatbot-project/",
-  },
+  }
 );
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
-  </StrictMode>,
+  </StrictMode>
 );
