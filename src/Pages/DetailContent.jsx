@@ -13,7 +13,7 @@ export default function DetailContent() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("/chatbot-project/data.json")
+    fetch("/data.json")
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
