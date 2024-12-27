@@ -14,7 +14,7 @@ export default function PasswordsDefine() {
           id="Password"
         />
       </div>
-      <Link to="/chatbot-project/">
+      <Link to="/">
         <button className="mt-8 flex gap-2 justify-center items-center text-center px-6 py-[9px]  rounded-[20px] bg-[#01CD98] text-white font-semibold text-base leading-5">
           save
         </button>

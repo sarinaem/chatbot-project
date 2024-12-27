@@ -27,7 +27,7 @@ export default function DetailContent() {
   return (
     <div>
       <div className="flex flex-row justify-between items-center mt-6">
-        <Link to="/chatbot-project">
+        <Link to="/">
           <div className="flex flex-row gap-2 items-center ml-4 ">
             <img src={back} alt="" />
 
@@ -51,7 +51,7 @@ export default function DetailContent() {
           </span>
           <span className="mb-6 flex flex-row items-center gap-4 text-4xl font-bold bg-gradient-to-r from-[#051320] to-[#00F5B5] bg-clip-text text-transparent">
             Chat bot AI
-            <Link to="/chatbot-project/newTopic">
+            <Link to="/newTopic">
               <button className="flex gap-2 items-center justify-center text-center w-[160px] h-[56px] px-6 py-[18px] rounded-[36px] bg-[#01CD98] text-white font-semibold text-base leading-5">
                 + <span></span> New Topic
               </button>

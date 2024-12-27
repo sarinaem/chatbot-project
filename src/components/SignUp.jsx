@@ -39,7 +39,7 @@ function SignUp() {
           className="w-7 h-7 ml-[16px] absolute top-[14px] left-[16px]"
         />
       </div>
-      <Link to="/chatbot-project/enter-pass">
+      <Link to="/enter-pass">
         <p className=" flex flex-col w-full pb-8 text-right font-semibold text-sm leading-[18px] text-[#01CD98]">
           Forgot Password?
         </p>
