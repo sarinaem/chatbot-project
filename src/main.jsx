@@ -60,10 +60,10 @@ const router = createBrowserRouter(
   ],
   {
     basename: "/chatbot-project/",
-  }
+  },
 );
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
-  </StrictMode>
+  </StrictMode>,
 );
